@@ -7,15 +7,25 @@ public class Student {
     private int age;
     private int gradeLevel;
 
+
     public Student(String firstName, String lastName, int age, int gradeLevel) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.gradeLevel = gradeLevel;
+
     }
 
     public void takeCourse(Course course) {
         System.out.println(this.getFullName() + " is taking the course on " + course.subject());
+    }
+
+
+    public boolean isSenior(){
+        return gradeLevel >= 6;
+    }
+    public boolean isJunior() {
+        return gradeLevel < 6;
     }
 
     public String getFullName() {
@@ -58,6 +68,11 @@ public class Student {
 
     public int gradeLevel() {
         return gradeLevel;
+    }
+
+    @Override
+    public String toString() {
+        return getFullName();
     }
 }
 

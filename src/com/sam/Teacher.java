@@ -3,9 +3,11 @@ package com.sam;
 public class Teacher extends Staff {
     private String subject;
 
+
     public Teacher(String name, int age, String subject) {
         super(name, age, "Teacher");
         this.subject = subject;
+
     }
 
     public String subject() {
@@ -22,6 +24,15 @@ public class Teacher extends Staff {
         System.out.println("Age: " + this.getAge());
         System.out.println("Role: " + this.getRole());
     }
+
+    public boolean isTeacher() {
+        return true;
+    }
+    @Override
+    public String toString() {
+        return getName();
+    }
+
 
 
     @Override
