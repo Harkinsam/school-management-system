@@ -1,4 +1,4 @@
-package com.sam;
+package main.java.com.sam;
 
 public class NonAcademicStaff {
     private String name;

@@ -1,4 +1,4 @@
-package com.sam;
+package main.java.com.sam;
 
 import java.io.IOException;
 
@@ -45,13 +45,16 @@ public class Main {
         library.addBook("yoruba", true);
 
 
-        Student juniorStudent = new Student("ola", "dam", 12, 04);
-        Student student = new Student("og", "oml", 13, 12);
+        Student juniorStudent = new Student("Ola", "Sam", 12, 4);
+        Student student = new Student("David", "Okechuku", 13, 12);
         Teacher teacher = new Teacher("Mr. Smith", 30, "english");
-        Teacher teacher1 = new Teacher("come", 45, "agric");
+        Teacher teacher1 = new Teacher("Oladapo", 45, "agric");
         library.borrow(teacher,student,juniorStudent,"math");
         library.borrow(teacher,student,juniorStudent,"math");
         library.borrow(null, student, juniorStudent,"agric");
+
+
+
 
 
 

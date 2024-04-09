@@ -1,4 +1,4 @@
-package com.sam;
+package main.java.com.sam;
 
 public class Course {
     private String subject;

@@ -1,4 +1,4 @@
-package com.sam;
+package main.java.com.sam;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

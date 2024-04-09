@@ -1,7 +1,6 @@
-package com.sam;
+package main.java.com.sam;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Library {
     private String name;
@@ -16,6 +15,11 @@ public class Library {
         Book book = new Book(title, available);
         books.add(book);
     }
+
+    public ArrayList<Book> getBooks() {
+        return books;
+    }
+
 
 
 
@@ -42,15 +46,24 @@ public class Library {
         }
     }
 
-    private Book findBookByTitle(String title) {
+    public Book findBookByTitle(String title) {
         for (Book book : books) {
             if (book.getTitle().equals(title)) {
                 return book;
             }
         }
-        return null; // Book not found
+        return null;
     }
 
+    public Object displayinfo(String title){
+        Book book = findBookByTitle(title);
+        if(book != null){
+            book.displayBookInfo();
+        }else {
+            System.out.println("Book \"" + title + "\" not found in the library.");
+        }
+        return null;
+    }
 
     public class Book {
         private String title;
@@ -86,6 +99,7 @@ public class Library {
         public void setBorrower(Object borrower) {
             this.borrower = borrower;
         }
+
 
         public void setAvailable(boolean available) {
             this.available = available;
