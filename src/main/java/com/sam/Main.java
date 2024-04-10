@@ -52,6 +52,8 @@ public class Main {
         library.borrow(teacher,student,juniorStudent,"math");
         library.borrow(teacher,student,juniorStudent,"math");
         library.borrow(null, student, juniorStudent,"agric");
+        library.getBorrowedBook("agric");
+
 
 
 

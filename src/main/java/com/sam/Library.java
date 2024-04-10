@@ -45,8 +45,25 @@ public class Library {
             System.out.println("Book \"" + title + "\" is taken.");
         }
     }
+    public Object getBorrowedBook(String title){
+        Book book = findBookByTitle(title);
+        if(book!= null){
+            return book.getBorrower();
+        }else {
+            return  null;
+        }
+    }
+    public boolean isvailable(String title){
+        Book book = findBookByTitle(title);
+        if(book!= null){
+            return book.isAvailable();
+        }else{
+            return false;
+        }
+    }
 
-    public Book findBookByTitle(String title) {
+
+    private Book findBookByTitle(String title) {
         for (Book book : books) {
             if (book.getTitle().equals(title)) {
                 return book;
@@ -55,14 +72,13 @@ public class Library {
         return null;
     }
 
-    public Object displayinfo(String title){
+    public void displayinfo(String title){
         Book book = findBookByTitle(title);
         if(book != null){
             book.displayBookInfo();
         }else {
             System.out.println("Book \"" + title + "\" not found in the library.");
         }
-        return null;
     }
 
     public class Book {
